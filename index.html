@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<meta charset="utf-8">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('select').formSelect();
+			 $('.datepicker').datepicker({
+			 	format:'dd/mm/yyyy'
+			 });
+		});
+
+		$(document).on('submit', '#registro', function(e){
+			e.preventDefault();
+			console.log($(this).serialize());
+		});
+	</script>
+
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body class="grey">
+	<nav class="white"></nav>
+	<br>
+	<div class="container white" style="min-height: : 100vh; padding: 20px"> <!-- CONTAINER -->
+		<div class="row"> <!-- ROW -->				
+			<form method="post" id="registro">
+				<div class="input-field col l6 col-m6">
+					<i class="material-icons prefix">account_box</i>
+					<input type="text" name="nombres" id="nombres">
+					<label for="nombres">Nombres</label>
+				</div>
+				<div class="input-field col l6 col-m6">
+					<i class="material-icons prefix">account_box</i>
+					<input type="text" name="apellidos" id="apellidos">
+					<label for="apellidos">Apellidos</label>
+				</div>
+				<div class="clearfix"></div>
+				<div class="input-field col l4 col-m4">
+					<i class="material-icons prefix">date_range</i>
+					<input class="datepicker" type="text" name="fecha_nacimiento" id="fecha_nacimiento">
+					<label for="fecha_nacimiento">Fecha de nacimiento</label>
+				</div>
+				<div class="input-field col l5 m5">
+					<i class="material-icons prefix">directions</i>
+					<input type="text" name="lugar_nacimiento" id="lugar_nacimiento">
+					<label for="lugar_nacimiento">Lugar de nacimiento</label>
+				</div>
+				<div class="input-field col l3 m3">
+					<i class="material-icons prefix">email</i>
+					<select name="pais">
+						<option selected disabled>Seleccione su nacionalidad</option>
+						<option value="1">Colombiano(a)</option>
+						<option value="2">Venezolano(a)</option>
+						<option value="3">Portugues</option>
+					</select>
+				</div>
+        
+				<div class="clearfix"></div>
+				<div class="input-field col l6 m6">
+					<i class="material-icons prefix">email</i>
+					<input type="email" name="correo" id="correo" class="validate">
+					<label for="correo">Email</label>
+					<span class="helper-text" data-error="Escriba un correo válido." data-success="Correo válido">Su correo es muy importante para contactarlo</span>
+				</div>
+				<div class="clearfix"></div>
+				<div class="input-field col l12 m12">
+					<i class="material-icons prefix">school</i>
+					<label>¿Posee algún grado universitario?</label>
+				</div>
+				<div class="clearfix"></div>
+				<div class="input-field col l1 m1">
+					<label>
+						<input type="radio" name="universitario" value="1">
+						<span>Si</span>
+					</label>
+				</div>
+				<div class="input-field col l1 m1">
+					<label>
+						<input type="radio" name="universitario" value="0">
+						<span>No</span>
+					</label>
+				</div>
+				<div class="clearfix"></div>
+				<br>
+				<div class="input-field col l12 m12">
+					<i class="material-icons prefix">assignment_turned_in</i>
+					<label>Selecciona tus intereses</label>
+				</div>
+				<div class="clearfix"></div>
+				<div class="input-field col l2 m2">
+					<label>
+						<input type="checkbox" class="filled-in" name="musica" value="1" />
+						<span>Música</span>
+					</label>
+				</div>
+				<div class="input-field col l2 m2">
+					<label>
+						<input type="checkbox" class="filled-in" name="cine" value="1" />
+						<span>Cine</span>
+					</label>
+				</div>
+				<div class="input-field col l2 m2">
+					<label>
+						<input type="checkbox" class="filled-in" name="viajes" value="1" />
+						<span>Viajes</span>
+					</label>
+				</div>
+				<div class="input-field col l2 m2">
+					<label>
+						<input type="checkbox" class="filled-in" name="videojuegos" value="1" />
+						<span>Videojuegos</span>
+					</label>
+				</div>
+				<div class="clearfix"></div>
+				<br>
+				<div class="input-field col l12 m12">
+					<i class="material-icons prefix">drafts</i>
+					<label>¿Deseas recibir notificaciones sobre ofertas por correo?</label>
+				</div>
+				<div class="input-field col l6 m6">
+					<div class="switch">
+						<label>
+							No
+							<input type="checkbox" name="ofertas" value="1">
+							<span class="lever"></span>
+							Si
+						</label>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				<button type="submit" class="btn waves-effect" style="background-color:yellowgreen">
+					<i class="material-icons right">check</i>
+					Registrarse
+				</button>
+  			</form>
+		</div> <!-- ROW -->
+	</div> <!-- CONTAINER -->
+	<br>
+</body>
+</html>
